@@ -1,11 +1,11 @@
 {
-    "processing_text": "`Processing, total time is based on the size of your files...`",
-    "wait_msg": "`Please wait a moment...`",
-    "err_link": "It looks like the link you sent is invalid, make sure it's a direct link and can be downloaded.",
-    "media_invalid": "Please reply to valid media.",
-    "dl_limit_exceeded": "Sorry, download limited to 2GB to reduce flood. You can convert your files to link.",
-    "dl_args_text": "Trying to download..",
-    "mediainfo_help": "Use the command /{cmd} [link], or reply to telegram media with /{cmd}.",
-    "capt_media": "ℹ️ Your mediainfo results..\n\n**Request By:** {ment}",
-    "viweb": "💬 Open on Web"
+    "processing_text": "`Đang xử lý, thời gian xử lý phụ thuộc vào kích thước tệp của bạn...`",
+    "wait_msg": "`Vui lòng chờ trong giây lát...`",
+    "err_link": "Có vẻ như liên kết bạn gửi không hợp lệ, hãy đảm bảo đó là liên kết trực tiếp và có thể tải xuống.",
+    "media_invalid": "Vui lòng trả lời một tệp phương tiện hợp lệ.",
+    "dl_limit_exceeded": "Xin lỗi, giới hạn tải xuống là 2GB để tránh quá tải. Bạn có thể chuyển đổi tệp của mình thành liên kết.",
+    "dl_args_text": "Đang cố gắng tải xuống...",
+    "mediainfo_help": "Sử dụng lệnh /{cmd} [link], hoặc trả lời tệp phương tiện trên Telegram bằng /{cmd}.",
+    "capt_media": "ℹ️ Kết quả thông tin phương tiện của bạn..\n\n**Yêu cầu bởi:** {ment}",
+    "viweb": "💬 Mở trên Web"
 }
