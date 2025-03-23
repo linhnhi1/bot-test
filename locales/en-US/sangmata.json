@@ -1,13 +1,13 @@
 {
-    "no_uname": "<code>No Username</code>",
-    "no_last_name": "<code>No Last Name</code>",
-    "uname_change_msg": "✨ Changed username from {bef} ➡️ {aft}.\n",
-    "lastname_change_msg": "✨ Changed last name from {bef} ➡️ {aft}.\n",
-    "firstname_change_msg": "✨ Changed first name from {bef} ➡️ {aft}.\n",
-    "set_sangmata_help": "Use <code>/{cmd} on</code>, to enable sangmata. If you want disable, you can use off parameter.",
-    "sangmata_already_on": "SangMata already enabled in your groups.",
-    "sangmata_enabled": "Sangmata enabled in your groups.",
-    "sangmata_already_off": "SangMata already disabled in your groups.",
-    "sangmata_disabled": "Sangmata disabled in your groups.",
-    "wrong_param": "Unknown parameter, use only on/off parameter."
+    "no_uname": "<code>Không có tên người dùng</code>",
+    "no_last_name": "<code>Không có họ</code>",
+    "uname_change_msg": "✨ Đã thay đổi tên người dùng từ {bef} ➡️ {aft}.\n",
+    "lastname_change_msg": "✨ Đã thay đổi họ từ {bef} ➡️ {aft}.\n",
+    "firstname_change_msg": "✨ Đã thay đổi tên từ {bef} ➡️ {aft}.\n",
+    "set_sangmata_help": "Sử dụng <code>/{cmd} on</code> để bật SangMata. Nếu muốn tắt, bạn có thể sử dụng tham số 'off'.",
+    "sangmata_already_on": "SangMata đã được bật trong nhóm của bạn.",
+    "sangmata_enabled": "Đã bật SangMata trong nhóm của bạn.",
+    "sangmata_already_off": "SangMata đã bị tắt trong nhóm của bạn.",
+    "sangmata_disabled": "Đã tắt SangMata trong nhóm của bạn.",
+    "wrong_param": "Tham số không hợp lệ, chỉ sử dụng tham số on/off."
 }
