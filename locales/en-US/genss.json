@@ -1,13 +1,13 @@
 {
-    "wait_msg": "Give me some time to process your request!! 😴",
-    "wait_dl": "<code>Processing, please wait..</code>",
-    "dl_progress": "Trying to download, please wait..",
-    "up_progress": "Trying to upload...",
-    "success_dl_msg": "File has been downloaded to <code>{path}</code>.",
-    "fail_open": "😟 Sorry! I cannot open the file.",
-    "limit_dl": "Sorry, download limited to 2GB to reduce flood. You can convert your files to link.",
-    "err_ssgen": "Failed screenshoot generation.\n\n{exc}",
-    "up_msg": "☑️ Generation screenshot successfully.\n\n{namma} (<code>{id}</code>)\n#️⃣ #ssgen #id{id}\n\nSS Generate by @{bot_uname}",
-    "no_reply": "Reply to a Telegram video or document or use direct link after command to generate screenshoot from media!",
-    "choose_no_ss": "Now choose how many result for screenshot? 🥳.\n\nTotal duration: `{td}` (`{dur} second`)"
+    "wait_msg": "Vui lòng chờ một chút để tôi xử lý yêu cầu của bạn!! 😴",
+    "wait_dl": "<code>Đang xử lý, vui lòng chờ...</code>",
+    "dl_progress": "Đang tải xuống, vui lòng chờ...",
+    "up_progress": "Đang tải lên...",
+    "success_dl_msg": "Tệp đã được tải xuống tại <code>{path}</code>.",
+    "fail_open": "😟 Xin lỗi! Tôi không thể mở tệp.",
+    "limit_dl": "Xin lỗi, giới hạn tải xuống là 2GB để tránh quá tải. Bạn có thể chuyển đổi tệp của mình sang liên kết.",
+    "err_ssgen": "Tạo ảnh chụp màn hình thất bại.\n\n{exc}",
+    "up_msg": "☑️ Tạo ảnh chụp màn hình thành công.\n\n{namma} (<code>{id}</code>)\n#️⃣ #ssgen #id{id}\n\nẢnh chụp được tạo bởi @{bot_uname}",
+    "no_reply": "Hãy trả lời một video hoặc tài liệu trên Telegram, hoặc sử dụng liên kết trực tiếp sau lệnh để tạo ảnh chụp màn hình từ phương tiện!",
+    "choose_no_ss": "Bây giờ hãy chọn số lượng ảnh chụp màn hình bạn muốn? 🥳\n\nTổng thời lượng: `{td}` (`{dur} giây`)"
 }
