@@ -1,15 +1,15 @@
 {
-    "sub_extr_help": "Please use command /{cmd} [link] to check subtitles or audio in video file.",
-    "conv_sub_help": "Use command /{cmd} by reply to .ass or .vtt file, to convert subtitle from .ass or .vtt to srt.",
-    "progress_str": "⏳ Processing your request..",
-    "convert_str": "⏳ Converting...",
-    "unauth_cb": "⚠️ Access Denied!",
-    "cancel_btn": "❌ Cancel",
-    "invalid_cb": "⚠️ DONT DELETE YOUR MESSAGE!",
-    "up_str": "Uploading files..",
-    "press_btn_msg": "Press the button below to extract subtitles/audio. Only support direct link at this time.\nProcessed in {timelog}",
-    "fail_extr_media": "Failed extract media, make sure your link is not protected by WAF or maybe inaccessible for bot.",
-    "fail_extr_sub": "Failed extract sub, Maybe unsupported format..\n\nLink: {link}\nERR: {e}",
-    "capt_extr_sub": "<b>Filename:</b> <code>{nf}</code>\n\nExtracted by @{bot} in {timelog}",
-    "capt_conv_sub": "<code>{nf}.srt</code>\n\nConverted by @{bot}"
+    "sub_extr_help": "Vui lòng sử dụng lệnh /{cmd} [link] để kiểm tra phụ đề hoặc âm thanh trong tệp video.",
+    "conv_sub_help": "Sử dụng lệnh /{cmd} bằng cách trả lời tệp .ass hoặc .vtt để chuyển đổi phụ đề từ .ass hoặc .vtt sang .srt.",
+    "progress_str": "⏳ Đang xử lý yêu cầu của bạn...",
+    "convert_str": "⏳ Đang chuyển đổi...",
+    "unauth_cb": "⚠️ Truy cập bị từ chối!",
+    "cancel_btn": "❌ Hủy",
+    "invalid_cb": "⚠️ ĐỪNG XÓA TIN NHẮN CỦA BẠN!",
+    "up_str": "Đang tải tệp lên...",
+    "press_btn_msg": "Nhấn vào nút bên dưới để trích xuất phụ đề/âm thanh. Hiện tại chỉ hỗ trợ liên kết trực tiếp.\nĐã xử lý trong {timelog}",
+    "fail_extr_media": "Trích xuất phương tiện thất bại, hãy đảm bảo liên kết của bạn không bị bảo vệ bởi WAF hoặc có thể truy cập được bởi bot.",
+    "fail_extr_sub": "Trích xuất phụ đề thất bại, có thể định dạng không được hỗ trợ..\n\nLiên kết: {link}\nLỗi: {e}",
+    "capt_extr_sub": "<b>Tên tệp:</b> <code>{nf}</code>\n\nĐược trích xuất bởi @{bot} trong {timelog}",
+    "capt_conv_sub": "<code>{nf}.srt</code>\n\nĐược chuyển đổi bởi @{bot}"
 }
