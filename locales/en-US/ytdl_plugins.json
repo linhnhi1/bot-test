@@ -1,14 +1,14 @@
 {
-    "no_channel": "This feature not supported for channel or anonymous user.",
-    "no_query": "Please input a query..!",
-    "no_res": "No result found for `{kweri}`",
-    "dl_btn": "Download",
-    "back": "Back",
-    "yts_msg": "Published {pub}\n\n<b>❯ Duration:</b> {dur}\n<b>❯ Views:</b> {vi}\n<b>❯ Uploader:</b> <a href='{clink}'>{cname}</a>\n\n",
-    "invalid_link": "Please input a valid YT-DLP Supported URL",
-    "err_parse": "Failed parse URL, check logs..",
-    "wait": "Please wait..",
-    "unauth": "Not Your Task..",
-    "endlist": "That's the end of list",
-    "vip-btn": "Because some user abuse and my server cannot handle it, best video now only for bot owner."
+    "no_channel": "Tính năng này không được hỗ trợ cho kênh hoặc người dùng ẩn danh.",
+    "no_query": "Vui lòng nhập truy vấn..!",
+    "no_res": "Không tìm thấy kết quả cho `{kweri}`",
+    "dl_btn": "Tải xuống",
+    "back": "Quay lại",
+    "yts_msg": "Được xuất bản vào {pub}\n\n<b>❯ Thời lượng:</b> {dur}\n<b>❯ Lượt xem:</b> {vi}\n<b>❯ Người đăng tải:</b> <a href='{clink}'>{cname}</a>\n\n",
+    "invalid_link": "Vui lòng nhập một URL hợp lệ được hỗ trợ bởi YT-DLP",
+    "err_parse": "Không thể phân tích URL, kiểm tra nhật ký...",
+    "wait": "Vui lòng chờ...",
+    "unauth": "Không phải nhiệm vụ của bạn...",
+    "endlist": "Đây là kết thúc danh sách",
+    "vip-btn": "Vì một số người dùng đã lạm dụng và máy chủ của tôi không thể xử lý được, video chất lượng cao giờ chỉ dành cho chủ sở hữu bot."
 }
