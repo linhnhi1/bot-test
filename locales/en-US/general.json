@@ -1,6 +1,6 @@
 {
-    "back_btn": "« Go back",
-    "no_results": "No Results.",
-    "unknown_id": "Sorry I can't recognize this user. Maybe I've never met him.",
-    "exp_task": "😶‍🌫️ Timeout. Task has been cancelled!"
-  }
+    "back_btn": "« Quay lại",
+    "no_results": "Không có kết quả.",
+    "unknown_id": "Xin lỗi, tôi không nhận diện được người dùng này. Có lẽ tôi chưa từng gặp họ.",
+    "exp_task": "😶‍🌫️ Hết thời gian. Nhiệm vụ đã bị hủy!"
+}
