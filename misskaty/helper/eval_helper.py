@@ -3,24 +3,22 @@ import os
 import traceback
 from typing import List, Optional
 
-
-# We dont modify locals VVVV ; this lets us keep the message available to the user-provided function
+# Chúng ta không thay đổi biến cục bộ (locals), điều này giúp giữ nguyên tin nhắn cho hàm do người dùng cung cấp
 async def meval(code, globs, **kwargs):
-    # This function is released in the public domain. Feel free to kang it (although I like credit)
-    # Note to self: please don't set globals here as they will be lost.
-    # Don't clutter locals
+    # Hàm này được phát hành dưới dạng mã nguồn mở. Bạn có thể sử dụng nó tự do (nhưng tôi sẽ rất vui nếu được ghi nhận công lao)
+    # Lưu ý: Đừng đặt biến global ở đây vì chúng có thể bị mất.
+    # Tránh làm lộn xộn không gian cục bộ
     locs = {}
-    # Restore globals latertypes
+    # Sao chép lại biến toàn cục để sử dụng sau
     globs = globs.copy()
-    # This code saves __name__ and __package into a kwarg passed to the function.
-    # It is set before the users code runs to make sure relative imports work
+    # Lưu các biến hệ thống như __name__ và __package__ vào tham số để đảm bảo import tương đối hoạt động
     global_args = "_globs"
     while global_args in globs.keys():
-        # Make sure there's no name collision, just keep prepending _s
+        # Đảm bảo không có sự trùng lặp tên, cứ tiếp tục thêm dấu gạch dưới (_)
         global_args = f"_{global_args}"
     kwargs[global_args] = {}
     for glob in ["__name__", "__package__"]:
-        # Copy data to args we are sending
+        # Sao chép dữ liệu vào tham số để gửi
         kwargs[global_args][glob] = globs[glob]
 
     root = ast.parse(code, "exec")
@@ -43,6 +41,7 @@ async def meval(code, globs, **kwargs):
     if not code:
         return None
 
+    # Kiểm tra nếu mã không có lệnh `return`, thay vào đó hãy in ra giá trị cuối cùng
     if not any(isinstance(node, ast.Return) for node in code):
         for i in range(len(code)):
             if isinstance(code[i], ast.Expr) and (
@@ -73,7 +72,7 @@ async def meval(code, globs, **kwargs):
         )
     )
 
-    # globals().update(**<global_args>)
+    # Cập nhật biến toàn cục trong hàm
     glob_copy = ast.Expr(
         ast.Call(
             func=ast.Attribute(
@@ -91,12 +90,15 @@ async def meval(code, globs, **kwargs):
     )
     ast.fix_missing_locations(glob_copy)
     code.insert(0, glob_copy)
+
+    # Khởi tạo biến lưu trữ kết quả trả về
     ret_decl = ast.Assign(
         targets=[ast.Name(id=ret_name, ctx=ast.Store())],
         value=ast.List(elts=[], ctx=ast.Load()),
     )
     ast.fix_missing_locations(ret_decl)
     code.insert(1, ret_decl)
+
     args = []
     for a in list(map(lambda x: ast.arg(x, None), kwargs.keys())):
         ast.fix_missing_locations(a)
@@ -110,6 +112,8 @@ async def meval(code, globs, **kwargs):
         kw_defaults=[None for _ in range(len(args))],
     )
     args.posonlyargs = []
+
+    # Định nghĩa một hàm bất đồng bộ tạm thời để thực thi mã
     fun = ast.AsyncFunctionDef(
         name="tmp", args=args, body=code, decorator_list=[], returns=None
     )
@@ -123,7 +127,7 @@ async def meval(code, globs, **kwargs):
     r = await locs["tmp"](**kwargs)
     for i in range(len(r)):
         if hasattr(r[i], "__await__"):
-            r[i] = await r[i]  # workaround for 3.5
+            r[i] = await r[i]  # Giải pháp thay thế cho Python 3.5
     i = 0
     while i < len(r) - 1:
         if r[i] is None:
@@ -140,12 +144,12 @@ async def meval(code, globs, **kwargs):
 def format_exception(
     exp: BaseException, tb: Optional[List[traceback.FrameSummary]] = None
 ) -> str:
-    """Formats an exception traceback as a string, similar to the Python interpreter."""
+    """Định dạng lỗi dưới dạng chuỗi, giống như cách trình thông dịch Python hiển thị."""
 
     if tb is None:
         tb = traceback.extract_tb(exp.__traceback__)
 
-    # Replace absolute paths with relative paths
+    # Thay thế đường dẫn tuyệt đối bằng đường dẫn tương đối
     cwd = os.getcwd()
     for frame in tb:
         if cwd in frame.filename:
