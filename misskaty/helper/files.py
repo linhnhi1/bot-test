@@ -1,21 +1,12 @@
 """
-MIT License
-Copyright (c) 2021 TheHamkerCat
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Giấy phép MIT (MIT License)
+Bản quyền (c) 2021 TheHamkerCat
+
+Cho phép bất kỳ cá nhân nào nhận được bản sao của phần mềm này và các tệp tài liệu liên quan (gọi chung là "Phần mềm") được quyền sử dụng miễn phí mà không có bất kỳ hạn chế nào, bao gồm nhưng không giới hạn quyền sử dụng, sao chép, chỉnh sửa, hợp nhất, xuất bản, phân phối, cấp phép lại và/hoặc bán bản sao của Phần mềm, đồng thời cho phép những người được cung cấp phần mềm có thể làm điều tương tự, với điều kiện sau đây:
+
+Thông báo bản quyền trên và thông báo cho phép này phải được bao gồm trong tất cả các bản sao hoặc phần quan trọng của Phần mềm.
+
+PHẦN MỀM ĐƯỢC CUNG CẤP "NGUYÊN TRẠNG", KHÔNG CÓ BẢO HÀNH DƯỚI BẤT KỲ HÌNH THỨC NÀO, DÙ LÀ RÕ RÀNG HAY NGỤ Ý, BAO GỒM NHƯNG KHÔNG GIỚI HẠN CÁC BẢO HÀNH VỀ KHẢ NĂNG BÁN ĐƯỢC, SỰ PHÙ HỢP VỚI MỤC ĐÍCH CỤ THỂ VÀ KHÔNG VI PHẠM. TRONG BẤT KỲ TRƯỜNG HỢP NÀO, TÁC GIẢ HOẶC CHỦ SỞ HỮU BẢN QUYỀN KHÔNG CHỊU TRÁCH NHIỆM VỀ BẤT KỲ YÊU CẦU, THIỆT HẠI HOẶC TRÁCH NHIỆM NÀO KHÁC, DÙ LÀ TRONG HỢP ĐỒNG, SAI LẦM DÂN SỰ HAY BẤT KỲ TRƯỜNG HỢP NÀO KHÁC, PHÁT SINH TỪ HOẶC CÓ LIÊN QUAN ĐẾN PHẦN MỀM HOẶC VIỆC SỬ DỤNG HOẶC CÁC GIAO DỊCH KHÁC TRONG PHẦN MỀM.
 """
 
 import math
@@ -25,10 +16,12 @@ from PIL import Image
 from pyrogram import Client, raw
 from pyrogram.file_id import FileId
 
+# Kích thước tối đa của sticker Telegram
 STICKER_DIMENSIONS = (512, 512)
 
 
 async def resize_file_to_sticker_size(file_path: str) -> str:
+    """Chỉnh kích thước ảnh về đúng kích thước sticker Telegram"""
     im = Image.open(file_path)
     if (im.width, im.height) < STICKER_DIMENSIONS:
         size1 = im.width
@@ -57,6 +50,7 @@ async def resize_file_to_sticker_size(file_path: str) -> str:
 async def upload_document(
     client: Client, file_path: str, chat_id: int
 ) -> raw.base.InputDocument:
+    """Tải lên tài liệu (document) lên Telegram"""
     media = await client.send(
         raw.functions.messages.UploadMedia(
             peer=await client.resolve_peer(chat_id),
@@ -81,6 +75,7 @@ async def upload_document(
 async def get_document_from_file_id(
     file_id: str,
 ) -> raw.base.InputDocument:
+    """Lấy thông tin tài liệu từ File ID"""
     decoded = FileId.decode(file_id)
     return raw.types.InputDocument(
         id=decoded.media_id,
