@@ -1,11 +1,11 @@
 {
-    "newgroup_log": "#NewGroup\nGroup = {jdl}(<code>{id}</code>)\nMembers Count = <code>{c}</code>",
-    "newuser_log": "#NewUser\nID - <code>{id}</code>\nName - {nm}",
-    "help_name": "Here is the help for **{mod}**:\n",
-    "help_txt": "Hello {kamuh}, My name is {bot}.\nI'm a pyrogram bot that developed by kind owner with some useful features.\nYou can look by clicking a button below.\n\nGeneral command are:\n - /start: Start the bot\n - /help: Give this message\n - /setlang: Change bot language [BETA]",
-    "click_me": "Click Me",
-    "back_btn": "Back",
-    "click_btn": "Click on the below button to get help about {nm}",
-    "pm_detail": "PM Me For More Details.",
-    "start_msg": "Hi {kamuh}, PM me to know about all my features. You can change bot language in bot using /setlang command but it's still in beta stage."
+    "newgroup_log": "#NhómMới\nNhóm = {jdl}(<code>{id}</code>)\nSố lượng thành viên = <code>{c}</code>",
+    "newuser_log": "#NgườiDùngMới\nID - <code>{id}</code>\nTên - {nm}",
+    "help_name": "Đây là hướng dẫn cho **{mod}**:\n",
+    "help_txt": "Xin chào {kamuh}, Tôi là {bot}.\nTôi là một bot pyrogram được phát triển bởi một người chủ tốt bụng với nhiều tính năng hữu ích.\nBạn có thể xem các tính năng bằng cách nhấn vào nút bên dưới.\n\nCác lệnh chung:\n - /start: Khởi động bot\n - /help: Hiển thị tin nhắn hướng dẫn này\n - /setlang: Thay đổi ngôn ngữ bot [BETA]",
+    "click_me": "Bấm vào tôi",
+    "back_btn": "Quay lại",
+    "click_btn": "Nhấn vào nút bên dưới để nhận trợ giúp về {nm}",
+    "pm_detail": "Nhắn tin riêng cho tôi để biết thêm chi tiết.",
+    "start_msg": "Chào {kamuh}, hãy nhắn tin riêng cho tôi để biết tất cả tính năng của tôi. Bạn có thể thay đổi ngôn ngữ bot bằng lệnh /setlang, nhưng tính năng này vẫn đang trong giai đoạn thử nghiệm."
 }
